@@ -1,0 +1,20 @@
+== README
+
+This API handles creating users.
+
+Users are created by POST'ing json to the root url that includes:
+* name
+* email
+* password
+* password_confirmation
+
+All attributes are required, and email will be checked for uniqueness and that it is well-formed.
+
+The response is a json object that includes:
+* id of the new user record
+* name
+* email
+* authentication_token
+
+The authentication token is generated when saving the user record.
+
